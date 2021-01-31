@@ -87,7 +87,7 @@ for group in groups:
     i+=1
 
 print(gr+'[+] Choose a group to add members')
-g_index = input(gr+"[+] Enter a Number : "+re)
+g_index = input(gr+"[+] Enter a Number : "+cy)
 target_group=groups[int(g_index)]
  
 target_group_entity = InputPeerChannel(target_group.id,target_group.access_hash)
