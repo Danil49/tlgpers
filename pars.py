@@ -1,3 +1,5 @@
+#!/bin/env python3
+
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty
@@ -79,7 +81,7 @@ all_participants = client.get_participants(target_group, aggressive=True)
  
 print(gr+'[+] Saving In file...')
 time.sleep(1)
-with open("members.csv","w","д",encoding='UTF-8') as f:
+with open("members.csv","r",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
     writer.writerow(['username','user id', 'access hash','name','group', 'group id'])
     for user in all_participants:

@@ -1,4 +1,5 @@
 #!/bin/env python3
+
 from telethon.sync import TelegramClient
 from telethon.tl.types import InputPeerUser
 from telethon.errors.rpcerrorlist import PeerFloodError
