@@ -18,10 +18,10 @@ class main():
     def banner():
         
         print(f"""
-    {re}╔╦╗{cy}┌─┐┌─┐┌─┐┌─┐┬─┐{re}╔═╗
-    {re} ║ {cy}├─┐├┤ ├─┘├─┤├┬┘{re}╚═╗
-    {re} ╩ {cy}└─┘└─┘┴  ┴ ┴┴└─{re}╚═╝
-    by https://github.com/elizhabs
+    {re}╔╦╗╔═╗{cy}╔═╗╔═╗╦═╗╔═╗╔═╗╦═╗{re}▜
+    {re} ║ ║ ╗{cy}╠═╝╠═╣╠╦╝╚═╗╠═ ╠╦╝
+    {re} ╩ ╚═╝{cy}╩  ╩ ╩╩╚═╚═╝╚═╝╩╚═{re}▟
+    
             """)
 
     def send_sms():

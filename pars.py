@@ -12,10 +12,10 @@ cy="\033[1;36m"
 
 def banner():
     print(f"""
-{re}╔╦╗{cy}┌─┐┌─┐┌─┐┌─┐┬─┐{re}╔═╗
-{re} ║ {cy}├─┐├┤ ├─┘├─┤├┬┘{re}╚═╗
-{re} ╩ {cy}└─┘└─┘┴  ┴ ┴┴└─{re}╚═╝
-by https://github.com/elizhabs
+{re}╔╦╗╔═╗{cy}╔═╗╔═╗╦═╗╔═╗╔═╗╦═╗{re}▜
+{re} ║ ║ ╗{cy}╠═╝╠═╣╠╦╝╚═╗╠═ ╠╦╝
+{re} ╩ ╚═╝{cy}╩  ╩ ╩╩╚═╚═╝╚═╝╩╚═{re}▟
+
         """)
 
 cpass = configparser.RawConfigParser()
@@ -62,14 +62,14 @@ for chat in chats:
     except:
         continue
  
-print(gr+'[+] Choose a group to scrape members :'+re)
+print(gr+'[+] Choose a group to scrape members :'+cy)
 i=0
 for g in groups:
     print(gr+'['+cy+str(i)+gr+']'+cy+' - '+ g.title)
     i+=1
  
 print('')
-g_index = input(gr+"[+] Enter a Number : "+re)
+g_index = input(gr+"[+] Enter a Number : "+cy)
 target_group=groups[int(g_index)]
  
 print(gr+'[+] Fetching Members...')
@@ -79,7 +79,7 @@ all_participants = client.get_participants(target_group, aggressive=True)
  
 print(gr+'[+] Saving In file...')
 time.sleep(1)
-with open("members.csv","w",encoding='UTF-8') as f:
+with open("members.csv","w","д",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
     writer.writerow(['username','user id', 'access hash','name','group', 'group id'])
     for user in all_participants:
